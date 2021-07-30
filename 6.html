@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function localizeMessage(amount) {
+            let first = amount % 100
+            let second = first % 10
+            let word = ""
+            if(first >= 11 && first <= 14) {
+                word =  "рублей"
+            } else if(second >= 2 && second < 5) {
+                word =  "рубля"
+            } else if(second == 1) {
+                word =  "рубль"
+            } else {
+                word =  "рублей"
+            }
+            return `Ваша сумма в ${amount} ${word} успешно зачислена.`
+        }
+        let amount = prompt("Введите сумму")
+        alert(localizeMessage(amount))
+    </script>
+</body>
+</html>
