@@ -19,7 +19,12 @@
     -->
 
     <script>
-        
+        let bs = document.querySelectorAll("b")
+        for(let b of  bs) {
+            if(!b.classList.contains("sign")) {
+                b.classList.add("sign")
+            }
+        }
     </script>
 </body>
 </html>
